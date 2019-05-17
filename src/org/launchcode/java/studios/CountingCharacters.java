@@ -15,9 +15,9 @@ public class CountingCharacters {
         for(char i : charactersInString) {
             Integer total = charactersInString.length;
             Integer charCount = 0;
-            char c = i;
+            char c = java.lang.Character.toLowerCase(i);
             for (int z = 0; z < total; z++){
-                if(c == charactersInString[z]) {
+                if(c == java.lang.Character.toLowerCase(charactersInString[z])) {
                     charCount ++;
                 }
             characters.put(c, charCount);
