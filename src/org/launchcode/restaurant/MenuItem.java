@@ -2,16 +2,26 @@ package org.launchcode.restaurant;
 
 public class MenuItem {
 
+    private String name;
     private	double price;
     private String description;
     private String category;
     private boolean isNew;
 
-    public MenuItem(double price, String description, String category) {
+    public MenuItem(String name, double price, String description, String category) {
+        this.name = name;
         this.price = price;
         this.description = description;
         this.category = category;
         this.isNew = true;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    private void setName(String name) {
+        this.name = name;
     }
 
     public double getPrice() {
@@ -43,11 +53,11 @@ public class MenuItem {
     }
 
     public static String printItem(MenuItem singleItem) {
-        return "Name: " + singleItem + "; Description: " + singleItem.getDescription() + "; Price: " + singleItem.getPrice();
+        return "Name: " + singleItem.name + "; Description: " + singleItem.getDescription() + "; Price: " + singleItem.getPrice();
     }
 
     public static void main(String[] args) {
-        MenuItem naan = new MenuItem(3.99, "Flaky, buttery, delicious bread","Appetizer");
+        MenuItem naan = new MenuItem("Naan",3.99, "Flaky, buttery, delicious bread","Appetizer");
         System.out.print(printItem(naan));
     }
 }
