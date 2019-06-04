@@ -1,9 +1,7 @@
 package org.launchcode.restaurant;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-
 
 
 public class Menu {
@@ -55,6 +53,5 @@ public class Menu {
     public static void main(String[] args) {
         Menu newMenu = new Menu();
         System.out.print(isMenuNew(newMenu));
-        //System.out.print(newMenu.getLastUpdated());
     }
 }

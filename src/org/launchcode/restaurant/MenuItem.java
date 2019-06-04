@@ -41,4 +41,13 @@ public class MenuItem {
     private void setNew(boolean aNew) {
         isNew = aNew;
     }
+
+    public static String printItem(MenuItem singleItem) {
+        return "Name: " + singleItem + "; Description: " + singleItem.getDescription() + "; Price: " + singleItem.getPrice();
+    }
+
+    public static void main(String[] args) {
+        MenuItem naan = new MenuItem(3.99, "Flaky, buttery, delicious bread","Appetizer");
+        System.out.print(printItem(naan));
+    }
 }
