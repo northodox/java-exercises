@@ -1,5 +1,7 @@
 package org.launchcode.restaurant;
 
+import java.util.Objects;
+
 public class MenuItem {
 
     private String name;
@@ -56,8 +58,30 @@ public class MenuItem {
         return "Name: " + singleItem.name + "; Description: " + singleItem.getDescription() + "; Price: " + singleItem.getPrice();
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MenuItem menuItem = (MenuItem) o;
+        return name.equals(menuItem.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
+    }
+
+    public static boolean areItemsEqual(MenuItem firstItem, MenuItem secondItem) {
+        if (firstItem.equals(secondItem)) {
+            return true;
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
         MenuItem naan = new MenuItem("Naan",3.99, "Flaky, buttery, delicious bread","Appetizer");
-        System.out.print(printItem(naan));
+        MenuItem borscht = new MenuItem("Borscht", 5.99, "Some sort of tomato soup I think","Side");
+        //System.out.print(printItem(naan));
+        System.out.print(areItemsEqual(naan, borscht));
     }
 }

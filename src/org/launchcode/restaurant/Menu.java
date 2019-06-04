@@ -54,7 +54,7 @@ public class Menu {
         for (MenuItem x : fullMenu) {
                 System.out.print(MenuItem.printItem(x));
             }
-        return "This menu lacks items!";
+        return("This menu lacks items!");
         }
 
     public static void main(String[] args) {
