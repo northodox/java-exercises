@@ -38,7 +38,7 @@ public class MenuItem {
         return category;
     }
 
-    public boolean isNew() {
+    public boolean getIsNew() {
         return isNew;
     }
 
@@ -55,7 +55,7 @@ public class MenuItem {
     }
 
     public static String printItem(MenuItem singleItem) {
-        return "Name: " + singleItem.name + "; Description: " + singleItem.getDescription() + "; Price: " + singleItem.getPrice();
+        return "Name: " + singleItem.name + "; Description: " + singleItem.getDescription() + "; Price: " + singleItem.getPrice() + "\n";
     }
 
     @Override
@@ -81,7 +81,7 @@ public class MenuItem {
     public static void main(String[] args) {
         MenuItem naan = new MenuItem("Naan",3.99, "Flaky, buttery, delicious bread","Appetizer");
         MenuItem borscht = new MenuItem("Borscht", 5.99, "Some sort of tomato soup I think","Side");
-        //System.out.print(printItem(naan));
-        System.out.print(areItemsEqual(naan, borscht));
+        System.out.print(printItem(naan));
+        //System.out.print(areItemsEqual(naan, borscht));
     }
 }
