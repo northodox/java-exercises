@@ -10,4 +10,11 @@ public abstract class Question {
         this.answer = answer;
     }
 
+    public Boolean checkAnswer(String userAnswer) {
+        if(answer.equals(userAnswer)) {
+            return true;
+        }
+        return false;
+    }
+
 }
