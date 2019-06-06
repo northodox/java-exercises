@@ -1,5 +1,9 @@
 package Classes;
 
-public class Question {
+public abstract class Question {
+
+    protected String questionText;
+    protected String answer;
+
 
 }
