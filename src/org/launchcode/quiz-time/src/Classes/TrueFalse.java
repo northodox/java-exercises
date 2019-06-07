@@ -1,7 +1,9 @@
 package Classes;
 
-public class TrueFalse extends Question{
+public class TrueFalse extends Question {
 
-    super()
+    public TrueFalse(String questionText, String answer) {
+        super(questionText, answer);
+    }
 
 }

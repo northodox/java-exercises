@@ -7,7 +7,7 @@ public abstract class Question {
 
     protected String questionText;
     protected String answer;
-    private int questionID;
+    //private int questionID;
 
     public Question(String questionText, String answer) {
         this.questionText = questionText;
