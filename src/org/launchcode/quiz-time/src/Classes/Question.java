@@ -6,7 +6,6 @@ import java.util.Objects;
 public abstract class Question {
 
     protected String questionText;
-
     protected String answer;
     private int questionID;
 
@@ -16,7 +15,7 @@ public abstract class Question {
     }
 
     public String receiveAnswer(String userAnswer) {
-        return userAnswer;
+        return userAnswer.toUpperCase();
     }
 
     public Boolean checkAnswer(String userAnswer) {
