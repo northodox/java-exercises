@@ -1,4 +1,7 @@
 package Classes;
 
-public class TrueFalse {
+public class TrueFalse extends Question{
+
+    super()
+
 }
